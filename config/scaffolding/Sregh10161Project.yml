@@ -8,7 +8,23 @@ packages:
   gitUsername: ArtiKhareIBM
   gitBranch: main
 - name: LowerFSPackage
+  version: "3.0"
   gitServerName: src_shared_GH_Arti_auto
   gitUrl: https://github.com/ArtiKhareIBM
   gitUsername: ArtiKhareIBM
   gitBranch: main
+services:
+- serviceName: project.sregh10161.integrations:githubfs
+  packages:
+  - name: Sregh10161Project
+    version: "1.0"
+  - name: LowerFSPackage
+    version: "3.0"
+- serviceName: LowerFSPackage:lowerFS
+  packages:
+  - name: LowerFSPackage
+    version: "3.0"
+- serviceName: pub.string:toLower
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2099
